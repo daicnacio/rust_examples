@@ -10,4 +10,7 @@ files in the local filesystem.
 This example uses `clap` to create a cli application
   - V1: one command, simple arguments
   - V2: subcommands
-
+## Example 3: protobuf
+This example uses `prost` to use protobuf with rust. Remember
+to install protoc
+  - V1: one service
