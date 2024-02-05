@@ -1,0 +1,21 @@
+syntax = "proto3";
+package ts;
+message TimeSeries {
+    repeated Measurement measurement = 1;  
+}
+message Measurement {
+    double wind_x = 1;
+    double wind_y = 2;
+    int64 timestamp = 3;
+
+}
+
+message MeasurementRequest {
+   string name = 1;
+   double west_east = 2;
+   double south_north = 3;
+}
+
+service Mast {
+   rpc MastOutput(MeasurementRequest) returns (TimeSeries);
+}
